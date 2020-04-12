@@ -77,7 +77,7 @@ if 'bdist_wheel' in sys.argv or 'install' in sys.argv:
                 package_data.append(os.path.join(root,file).replace(my_path + 'qnn/', ''));
 
     print ("Checking out darknet...")
-    subprocess.check_output(["git", "clone", "https://github.com/giuliogamba/darknet", my_path + "darknet"])
+    subprocess.check_output(["git", "clone", "https://github.com/mikelsr/darknet", my_path + "darknet"])
     print ("Building darknet...")
     subprocess.check_output(["make", "-j2", "-C", my_path + "darknet", "all"])
     # print ("Moving darknet library...")
